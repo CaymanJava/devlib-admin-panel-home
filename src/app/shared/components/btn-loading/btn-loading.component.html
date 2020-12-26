@@ -1,0 +1,8 @@
+<button [color]="color" [disabled]="loading || disabled" [ngClass]="{loading: loading}"
+        [type]="type" aria-label="LOG IN" class="submit-button btn {{btnClass}}" mat-raised-button>
+  <div *ngIf="loading" class="btn-spinner float-left"></div>
+  <span *ngIf="!loading">  
+    <ng-content></ng-content>
+  </span>
+  <span *ngIf="loading">{{loadingText}}</span>
+</button>
